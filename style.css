@@ -1,0 +1,60 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid black;
+  background: url(https://cdn.webshopapp.com/shops/94414/files/54504462/mexico-flag-icon-free-download.jpg)
+    no-repeat center center;
+  background-size: 60px 25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: 'ES';
+  font-size: 12px;
+  height: 23px;
+  width: 23px;
+  left: 0px;
+  bottom: -1px;
+  background-color: rgb(255,255,255,.8);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px solid black;
+}
+
+input:checked + .slider {
+  background: url(https://cdn.webshopapp.com/shops/94414/files/54959460/the-united-states-flag-icon-free-download.jpg)
+    no-repeat center center;
+  background-size: 60px 25px;
+}
+
+input:checked + .slider:before {
+  content: 'EN';
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
